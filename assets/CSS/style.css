@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Hover Effect */
+.menu-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item::before {
+  content: "";
+  position: absolute;
+  top: 10;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  transition: all 0.5s ease;
+  z-index: 0;
+}
+
+.menu-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #fda085; /* Color of the underline */
+  transition: all 0.4s ease-out;
+  transform: translateX(-50%);
+}
+
+.menu-item:hover::before {
+  width: 100%; /* Expands the underline to full width */
+}
