@@ -1,15 +1,12 @@
 const menuButton = document.getElementById('menuButton');
 const mobileMenu = document.getElementById('mobileMenu');
-const themeToggleMobile = document.getElementById('themeToggleMobile');
-const lightIconMobile = document.getElementById('lightIconMobile');
-const darkIconMobile = document.getElementById('darkIconMobile');
 
-const themeToggleDesktop = document.getElementById('themeToggleDesktop');
-const lightIconDesktop = document.getElementById('lightIconDesktop');
-const darkIconDesktop = document.getElementById('darkIconDesktop');
+
+const swiperButtonPrev = document.querySelector('.swiper-button-prev');
+const swiperButtonNext = document.querySelector('.swiper-button-next');
 
 // Check the current theme from localStorage
-const currentTheme = localStorage.getItem('theme') || 'light';
+const currentTheme = localStorage.getItem('theme') || 'dark';
 if (currentTheme === 'dark') {
     document.documentElement.classList.add('dark');
     lightIconDesktop.classList.remove('hidden');
@@ -64,6 +61,8 @@ themeToggleDesktop.addEventListener('click', () => {
 menuButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('translate-x-full');
     mobileMenu.classList.toggle('translate-x-0');
+    swiperButtonPrev.classList.toggle('hidden');
+    swiperButtonNext.classList.toggle('hidden');
 });
 
 // Close the mobile menu when clicking on a menu item
@@ -73,3 +72,5 @@ menuItems.forEach(item => {
         mobileMenu.classList.add('translate-x-full');
     });
 })
+///////////////////////////////////////////////////////
+;
