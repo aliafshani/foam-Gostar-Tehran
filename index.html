@@ -1,202 +1,264 @@
 <!doctype html>
-<html dir="" lang="en">
+<html dir="rtl" lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FoamGostarTehran</title>
-
-  <link rel="stylesheet" href="assets/CSS/style.css">
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoamGostarTehran</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/CSS/style.css">
 </head>
 
-<body class="bg-orange-700 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
-  <header>
-    <!-- Navbar -->
-    <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16 items-center">
+<body class="bg-orange-300 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+    <header>
+        <!-- Navbar -->
+        <nav class="bg-orange-700 dark:bg-gray-800 text-white shadow-md fixed w-full md:w-full z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16 items-center">
 
-          <!-- Logo -->
-          <div class="flex items-center">
-            <img src="https://via.placeholder.com/40" alt="Logo" class="h-10 w-auto">
-            <span class="ml-3 text-xl font-bold">MyWebsite</span>
-          </div>
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/40" alt="Logo" class="h-10 w-auto">
+                        <span class="ml-3 text-xl font-bold">MyWebsite</span>
+                    </div>
 
-          <!-- Navbar Items for Desktop (Including Theme Toggle) -->
-          <div class="hidden md:flex items-center space-x-4">
-            <button id="themeToggleDesktop" class="text-gray-700 dark:text-gray-300 focus:outline-none">
-              <svg id="lightIconDesktop" class="h-6 w-6 hidden" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v2m0 14v2m8-8h2M4 12H2m16.364 4.364l1.414 1.414M6.343 6.343L4.93 4.93m12.02 12.02l1.415 1.414M6.343 17.657L4.93 19.07M12 5a7 7 0 100 14 7 7 0 000-14z"/>
-              </svg>
-              <svg id="darkIconDesktop" class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3C8.134 3 5 6.134 5 10s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm0 14a7 7 0 100-14 7 7 0 000-14z"/>
-              </svg>
-            </button>
-            <a href="#" class="menu-item text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md">Home</a>
-            <a href="#" class="menu-item text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md">About</a>
-            <a href="#" class="menu-item text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md">Services</a>
-            <a href="#" class="menu-item text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md">Contact</a>
-            <!-- Dark/Light Mode Toggle (for Desktop) -->
+                    <!-- Navbar Items for Desktop (Including Theme Toggle) -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <button id="themeToggleDesktop" class="text-gray-700 dark:text-gray-300 focus:outline-none">
+                            <svg id="lightIconDesktop" class="h-6 w-6 hidden" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3v2m0 14v2m8-8h2M4 12H2m16.364 4.364l1.414 1.414M6.343 6.343L4.93 4.93m12.02 12.02l1.415 1.414M6.343 17.657L4.93 19.07M12 5a7 7 0 100 14 7 7 0 000-14z" />
+                            </svg>
+                            <svg id="darkIconDesktop" class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3C8.134 3 5 6.134 5 10s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm0 14a7 7 0 100-14 7 7 0 000-14z" />
+                            </svg>
+                        </button>
+                        <a href="#"
+                            class="menu-item text-white dark:text-gray-300 hover:text-orange-200 dark:hover:text-white px-3 py-2 rounded-md">Home</a>
+                        <a href="#"
+                            class="menu-item text-white dark:text-gray-300 hover:text-orange-200 dark:hover:text-white px-3 py-2 rounded-md">About</a>
+                        <a href="#"
+                            class="menu-item text-white dark:text-gray-300 hover:text-orange-200 dark:hover:text-white px-3 py-2 rounded-md">Services</a>
+                        <a href="#"
+                            class="menu-item text-white dark:text-gray-300 hover:text-orange-200 dark:hover:text-white px-3 py-2 rounded-md">Contact</a>
+                        <!-- Dark/Light Mode Toggle (for Desktop) -->
 
-          </div>
+                    </div>
 
-          <!-- Dark/Light Mode Toggle and Mobile Menu Button (for Mobile) -->
-          <div class="flex items-center space-x-4 md:hidden">
-            <!-- Dark/Light Mode Toggle (for Mobile) -->
-            <button id="themeToggleMobile" class="text-gray-700 dark:text-gray-300 focus:outline-none">
-              <svg id="lightIconMobile" class="h-6 w-6 hidden" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v2m0 14v2m8-8h2M4 12H2m16.364 4.364l1.414 1.414M6.343 6.343L4.93 4.93m12.02 12.02l1.415 1.414M6.343 17.657L4.93 19.07M12 5a7 7 0 100 14 7 7 0 000-14z"/>
-              </svg>
+                    <!-- Dark/Light Mode Toggle and Mobile Menu Button (for Mobile) -->
+                    <div class="flex items-center space-x-4 md:hidden">
+                        <!-- Dark/Light Mode Toggle (for Mobile) -->
+                        <button id="themeToggleMobile" class="text-white dark:text-gray-300 focus:outline-none">
+                            <svg id="lightIconMobile" class="h-6 w-6 hidden" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3v2m0 14v2m8-8h2M4 12H2m16.364 4.364l1.414 1.414M6.343 6.343L4.93 4.93m12.02 12.02l1.415 1.414M6.343 17.657L4.93 19.07M12 5a7 7 0 100 14 7 7 0 000-14z" />
+                            </svg>
 
-              <svg id="darkIconMobile" class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3C8.134 3 5 6.134 5 10s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm0 14a7 7 0 100-14 7 7 0 000-14z"/>
-              </svg>
-            </button>
+                            <svg id="darkIconMobile" class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3C8.134 3 5 6.134 5 10s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm0 14a7 7 0 100-14 7 7 0 000-14z" />
+                            </svg>
+                        </button>
 
-            <!-- Menu Button for Mobile -->
-            <button id="menuButton" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 focus:outline-none">
-              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
-              </svg>
-            </button>
-          </div>
+                        <!-- Menu Button for Mobile -->
+                        <button id="menuButton"
+                            class="text-white dark:text-gray-300 hover:text-gray-900 focus:outline-none">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dropdown Menu for Mobile -->
+            <div id="mobileMenu"
+                class="md:hidden bg-orange-700 z-50 dark:bg-gray-800 w-full h-dvh right-0 shadow-lg absolute top-16 transition-transform transform translate-x-full">
+                <a href="#"
+                    class="block px-4 py-2 text-white dark:text-gray-300 hover:bg-orange-300 dark:hover:bg-orange-300">Home</a>
+                <a href="#"
+                    class="block px-4 py-2 text-white dark:text-gray-300 hover:bg-orange-300 dark:hover:bg-orange-300">About</a>
+                <a href="#"
+                    class="block px-4 py-2 text-white dark:text-gray-300 hover:bg-orange-300 dark:hover:bg-orange-300">Services</a>
+                <a href="#"
+                    class="block px-4 py-2 text-white dark:text-gray-300 hover:bg-orange-300 dark:hover:bg-orange-300">Contact</a>
+            </div>
+        </nav>
+        <!--end Navbar-->
+    </header>
+
+    <main class="pt-20 px-5 md:px-28">
+        <div class="relative swiper-container overflow-x-hidden w-full h-auto md:h-64 rounded">
+            <div class="swiper-wrapper">
+                <!-- اسلاید‌ها -->
+                <div class="swiper-slide flex items-center justify-center  h-auto md:h-64">
+                    <img src="https://via.placeholder.com/1920x1080?text=اسلاید+1" alt="اسلاید 1"
+                        class="w-full  h-auto md:h-64 object-cover">
+                </div>
+                <div class="swiper-slide flex items-center justify-center  h-auto md:h-64">
+                    <img src="https://via.placeholder.com/1920x1080?text=اسلاید+2" alt="اسلاید 2"
+                        class="w-full  h-auto md:h-64 object-cover">
+                </div>
+                <div class="swiper-slide flex items-center justify-center  h-auto md:h-64">
+                    <img src="https://via.placeholder.com/1920x1080?text=اسلاید+3" alt="اسلاید 3"
+                        class="w-full  h-auto md:h-64 object-cover">
+                </div>
+            </div>
+            <!-- دکمه‌های ناوبری -->
+            <div
+                class="swiper-button-prev  absolute z-40 top-1/2 left-0 transform -translate-y-1/2 text-gray-600 hover:text-gray-800 cursor-pointer">
+            </div>
+            <div
+                class="swiper-button-next absolute z-40 top-1/2 right-0 transform -translate-y-1/2 text-gray-600 hover:text-gray-800 cursor-pointer">
+            </div>
         </div>
-      </div>
 
-      <!-- Dropdown Menu for Mobile -->
-      <div id="mobileMenu" class="md:hidden bg-white dark:bg-gray-800 w-full right-0 shadow-lg absolute top-16 transition-transform transform translate-x-full">
-        <a href="#" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Home</a>
-        <a href="#" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">About</a>
-        <a href="#" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Services</a>
-        <a href="#" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Contact</a>
-      </div>
-    </nav>
-    <!--end Navbar-->
-  </header>
-  <main class="pt-16">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. In quaerat tenetur tempore maxime molestias. Delectus
-    vitae voluptatibus sapiente quasi voluptates. Voluptatibus nemo quam hic eius maxime odio et sunt obcaecati.
-    Aliquam fuga molestiae ullam corrupti architecto dolorem minima illum praesentium vel id itaque dicta veritatis eum
-    soluta, doloremque necessitatibus, mollitia voluptatem beatae at? Repellat odit recusandae porro ullam cumque
-    tempore.
-    Qui dicta dolorem ducimus quisquam molestiae eveniet obcaecati officiis consectetur enim consequatur neque eius
-    laudantium nostrum voluptas, a similique earum odio vero! Amet nemo asperiores fugit eligendi cumque molestiae
-    eaque.ma ducimus labore, perspiciatis adipisci fugit inventore beatae praesentium exercitationem corrupti
-    officiis sint facere dolore voluptatem deserunt autem porro earum id omnis? Accusantium fuga numquam nostrum
-    recusandae animi.
-    Corrupti, rerum delectus, nemo veniam minus voluptas illum maiores voluptatum nam accusamus nulla sequi corporis
-    odit hic incidunt cupiditate cumque inventore doloremque alias quisquam aperiam vero repellat asperiores in.
-    Consectetur!
-    Obcaecati odio ex beatae eos, quaerat necessitatibus tempora laudantium eveniet eligendi debitis odit aspernatur
-    consequuntur laborum fuga minus impedit molestiae possimus distinctio nihil ea harum quae quam. Excepturi,
-    voluptatem fugit?
-    Ipsum recusandae architecto quis alias, rem voluptates. Animi, earum non voluptate deleniti maiores obcaecati facere
-    fugit, similique omnis impedit voluptatem numquam excepturi natus quos quis aperiam voluptatibus doloremque eveniet
-    qui?
-    Velit, unde. Voluptatum praesentium et temporibus officia numquam, laudantium commodi corporis autem veritatis
-    doloribus aut eum! Nihil ab praesentium in aspernatur accusantium nobis laboriosam corrupti, obcaecati illo quisquam
-    et quaerat!
-    Provident asperiores autem accusantium consequuntur ratione eligendi ipsam sint illo iusto perferendis minus beatae,
-    pariatur aspernatur quibusdam, odit optio. Expedita rem consequatur quae nobis aspernatur optio minus reiciendis
-    voluptatum quod!
-    Et sapiente voluptate rem aperiam quam? Ea enim adipisci, provident porro corrupti saepe cupiditate nobis veniam
-    itaque sit distinctio cum. Ipsa qui totam voluptatem, voluptatibus officiis necessitatibus expedita amet ullam.
-    Sed eum commodi ratione! Fugiat cum unde est excepturi, sapiente sunt accusamus quibusdam libero cupiditate!
-    Inventore dolor est recusandae explicabo porro officia animi laboriosam quos tempora. Aliquam, at? Ipsum, quo.
-    Sunt veritatis quidem blanditiis, repellat qui autem. Impedit ad perspiciatis tenetur consequatur eligendi quo modi
-    fugit, reiciendis itaque et quasi asperiores quis sequi, consectetur eaque voluptatem cum repellendus dolorem
-    suscipit.
-    Aperiam velit iste maxime atque ex. Alias nulla quam cupiditate ipsum enim atque sit iusto sunt beatae. Id iste
-    quidem exercitationem qui! Quam illo, nobis consequatur eligendi similique harum quae.
-    Iusto reiciendis tempore quidem laboriosam eveniet beatae officia itaque doloremque, numquam rem dignissimos vitae
-    suscipit molestiae? Ut eius, eveniet autem dolores ipsa dicta adipisci quo itaque? Eveniet rerum excepturi incidunt!
-    Cupiditate inventore ipsam assumenda deserunt quaerat hic explicabo id repudiandae architecto laboriosam, optio
-    accusamus illum rerum aliquam temporibus, odit in, quisquam obcaecati. Sunt sed in dolor minus error unde quam!
-    Exercitationem eius, fugiat commodi aliquam magnam assumenda consectetur cumque veniam suscipit inventore voluptatem
-    vel modi ea itaque quam fugit saepe quo reprehenderit sit eligendi aliquid error. Velit perferendis ad expedita!
-    Placeat in quasi, libero quibusdam, molestias fuga similique laborum reiciendis dolore officiis aut maxime?
-    Laudantium alias ipsa enim similique libero in excepturi? Quas perferendis quis expedita id repellendus aliquam
-    libero!
-    Dolore quasi ab, reprehenderit facere ratione quaerat aspernatur doloremque. Omnis, iste ipsam. Dolorum earum iusto
-    quia, ab voluptas natus delectus cum repellendus autem exercitationem esse maiores aspernatur et libero. Minima?
-    Hic ducimus itaque unde modi vitae minima ullam reiciendis dolores libero cum doloribus, reprehenderit iusto. Iste
-    possimus ipsum perspiciatis hic reiciendis, doloremque ratione alias qui mollitia, animi necessitatibus dolorem
-    temporibus.
-    Vel autem cupiditate repellat qui eaque voluptates, molestias pariatur nam reprehenderit distinctio numquam optio
-    ipsam neque, animi explicabo, quidem modi corrupti? Iusto soluta consequuntur autem maiores dolore temporibus est
-    laudantium.
-    Expedita nobis, tempora ducimus odio amet aliquid? Tempora impedit repudiandae aliquid natus, rem, ex iste aut
-    distinctio quo ipsum temporibus omnis enim ad saepe ipsa, cumque fuga dolorum illo. Voluptatum.
-    Rerum est corporis unde illum eos eaque iusto quae! Libero aliquam recusandae illo culpa quam reiciendis corporis,
-    necessitatibus eos minima quos sapiente esse et in dolorem adipisci praesentium doloremque excepturi.
-    Minus vel neque fugiat iste a voluptate maxime nisi vitae. Nostrum molestias reprehenderit, nulla voluptatum tenetur
-    enim neque, quisquam nisi perferendis voluptate veritatis qui error cupiditate eius magnam? Quae, sapiente?
-    Facilis possimus placeat cupiditate repellendus itaque delectus ducimus eligendi neque. Minima, nesciunt vel nam
-    omnis corporis culpa dolor voluptatem blanditiis, minus accusantium saepe voluptas aut. Ratione dolorem veniam
-    commodi illum.
-    Totam, ullam officia. Totam velit tenetur voluptatum ex asperiores, dolore, iure ducimus consectetur adipisci hic
-    rerum! Aliquam iste laborum similique maxime dolore id ipsam fugiat nisi, dolor ratione, dolores ab!
-    Fugit, quo laboriosam ipsum iusto nulla saepe eos ipsam molestias magni repudiandae distinctio temporibus modi
-    ducimus dolorem hic ipsa. Ex unde quos assumenda nobis molestiae corporis tempore architecto vitae dignissimos?
-    Reprehenderit at impedit, fuga quasi natus neque earum officia porro doloremque nisi distinctio praesentium ducimus
-    enim soluta eius est eaque corporis nam fugiat, vel magni odio rem culpa. Pariatur, error.
-    Distinctio, vero assumenda maiores culpa quasi, provident inventore tempora ea asperiores nihil dolore aliquam
-    officia voluptate in modi id voluptatum iste sit accusamus beatae! Accusamus ex deserunt non dolores totam.
-    Animi vitae voluptate est temporibus optio ducimus aut, officia eos praesentium velit facere doloremque. Voluptate,
-    illo nulla ipsum laborum nobis iste excepturi harum fugit officia distinctio, aliquam, iusto sequi optio.
-    In cumque blanditiis pariatur earum? Fugit veritatis rerum nemo, neque architecto aliquid dolorem sunt, inventore et
-    praesentium, saepe a assumenda consequuntur quibusdam deleniti dolores nulla molestias. Molestias sunt officiis
-    necessitatibus?
-    Facilis quos incidunt fuga aliquam officia architecto laboriosam quae sint error eius cupiditate voluptates animi
-    quis a eligendi totam, possimus repudiandae quas non corporis minima quasi labore. Saepe, voluptatibus? Aut?
-    Temporibus totam sunt necessitatibus sequi perferendis, molestiae quae aut sapiente tempore fugiat dolores cum,
-    repellendus error cupiditate nemo vitae corporis pariatur? Fuga saepe debitis eaque accusantium consequatur
-    voluptates rem modi?
-    Soluta eveniet cumque consectetur. Expedita possimus veritatis aliquid error ea earum molestiae natus quidem dolorum
-    cumque? Ab magnam perspiciatis temporibus nam voluptates sequi perferendis sed enim quos, doloremque consequuntur
-    repudiandae.
-    Ratione voluptatem temporibus id reiciendis earum, illum ipsam at laboriosam ipsum repudiandae iusto excepturi
-    explicabo aliquid distinctio et incidunt provident tenetur voluptatibus, ea vero, voluptatum repellat commodi
-    corporis laudantium. Iste.
-    Vel ullam, fugiat illo similique libero porro dolore assumenda quaerat ad quidem odit esse aspernatur adipisci ipsa
-    enim cumque minima recusandae. Voluptate atque quibusdam totam! Ea corporis accusantium nulla quas?
-    Ducimus consequatur, fugiat laborum explicabo omnis, architecto quos quo iste, culpa deserunt ex placeat at!
-    Nesciunt iure cum quod nemo repudiandae quae nam. Sunt distinctio id ex, sed repudiandae quae!
-    Eos quas nam facilis sint quae obcaecati recusandae debitis eligendi sunt repudiandae. Commodi obcaecati quidem
-    nihil, quam, nesciunt libero sapiente in iste harum, adipisci quia consectetur minima unde quisquam delectus!
-    Debitis ducimus numquam explicabo ab dignissimos, laudantium ut voluptates fugit adipisci placeat. Quod quasi
-    corrupti autem id hic ratione, architecto distinctio nam consequatur incidunt magni nesciunt, ex accusamus nisi
-    praesentium?
-    Vero alias a tempora iste eos autem dolore est. Repellat praesentium laboriosam nemo magni ipsa sed minus! Quaerat
-    beatae sequi dolorum porro doloribus pariatur eaque, obcaecati excepturi officia maiores esse.
-    Repellendus rem impedit nihil aspernatur ipsum libero rerum quod id quibusdam omnis, voluptate labore officia
-    veritatis facere. Quas inventore id amet quisquam magni ullam itaque? Nulla possimus doloremque quae repudiandae.
-    Omnis eos eum autem ipsum tempore vitae optio modi voluptatibus deserunt, voluptatem ullam et! Consectetur
-    necessitatibus dolor eos modi. Animi tenetur ipsum ad exercitationem voluptatem, provident obcaecati vitae atque
-    illo?
-    Quae exercitationem laborum ab quo impedit suscipit ex accusamus quia, modi quaerat iste blanditiis alias saepe
-    assumenda numquam perferendis tempore voluptas, dignissimos obcaecati tenetur iure provident et quidem illo? Alias?
-    Ad doloremque quae, asperiores dolore nemo consequatur similique consequuntur natus dolores dignissimos molestias,
-    autem et, repudiandae vero. Facere iure praesentium, modi saepe itaque ex molestiae, perferendis earum cum repellat
-    officiis?
-    Impedit sed veniam reiciendis sint ea. Odio aperiam omnis aliquam incidunt, magni sit voluptatum ex corporis dolor,
-    natus quas dignissimos possimus nobis quisquam commodi placeat at nulla ea! Iusto, consequatur?
-    Autem vero modi ipsam delectus assumenda ducimus molestias earum nihil error non. Nihil quam inventore asperiores
-    saepe culpa fugit, officiis, dignissimos consequatur odio, impedit ea ex quae. Laudantium, facere voluptatum.
-    Error mollitia aperiam aut. Nulla, impedit adipisci? Totam repellat ducimus id asperiores quam expedita mollitia
-    placeat incidunt ipsa aliquam maiores similique soluta voluptates voluptas omnis ad quasi, eaque doloribus rerum.
-    Quia voluptates odio iusto quis aliquam, necessitatibus perspiciatis deserunt ut modi, error dolore, cumque ipsa.
-    Fugiat voluptatibus consequuntur praesentium molestiae, consectetur similique eveniet. Accusantium officia quis aut
-    placeat sit dolore?
-    Cupiditate sunt est, quam vel nihil debitis error! Itaque aspernatur laborum harum ut? Dolorum, inventore saepe.
-    Culpa, quas illum totam voluptatem eligendi nostrum, nisi enim harum itaque dolores magni quaerat?
-    Exercitationem mollitia quae, corrupti quis iure saepe dolores quas id. Saepe cumque repudiandae dolor temporibus
-    eligendi quam! Consequuntur consequatur obcaecati, nemo, temporibus doloremque cumque sunt, eos corrupti quo
-    voluptate repellat?Deserunt aliquam necessitatibus quibusdam. Perferendis quia cumque eligendi
-    deserunt vel ipsa! Totam, sint cum repellat quo nihil su
-  </main>
-  <script type="module" src="assets/JS/main.js"></script>
+        <!--    start about-->
+        <div class="mt-10 flex flex-col md:flex-row">
+            <div class="flex flex-col w-full md:w-7/12 ">
+                <h1 class="text-5xl font-extrabold font-yekanTittr text-white text-center md:text-right">فوم گستر تهران
+                </h1>
+                <p class="font-yekanMatn text-justify text-white pt-6 leading-9">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها
+                    و
+                    متون
+                    بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+                    متنوع با
+                    هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
+                    جامعه
+                    و
+                    متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و
+                    فرهنگ
+                    پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+                    راهکارها و
+                    شرایط
+                    سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل
+                    دنیای
+                    موجود
+                    طراحی اساسا مورد استفاده قرار گیرد.
+                </p>
+            </div>
+            <div class="w-full md:w-5/12 relative">
+                <img class="absolute w-full md:w-6/12 md:right-1/2 top-9 img-number1"
+                    src="./assets/Images/power815799640.png" alt="">
+                <img class="absolute w-8/12 md:w-4/12 md:right-1/3 top-20 " src="./assets/Images/paya-3-resize.jpg"
+                    alt="">
+            </div>
+        </div>
+        <!--    end about-->
+        <!-- start pruducts -->
+        <div class="product mt-96 md:mt-32 ">
+            <p
+                class="text-3xl md:mt-0 md:pt-0 dark:text-white text-white  text-center pt-64 mt-56 font-yekanTittr font-bold">
+                محصولات
+                ما</p>
+            <div class="mt-10 flex justify-center flex-col md:flex-row flex-wrap">
+                <div class="card mx-auto my-2 md:m-2 w-11/12 md:w-3/12 text-center  bg-orange-600 dark:bg-sky-800">
+                    <div class="card-img bg-cover">
+                        <img class="card-img" src="./assets//Images/paya-3-resize.jpg" alt="">
+                    </div>
+                    <div class="content mt-5">
+                        <p class="mb-5">
+                            <span class="text-xl font-bold">فوم باحال</span>
+                        </p>
+                        <p class="subtext">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis </p>
+                        <button class=" text-indigo-300 rounded-md p-2 mt-5">مشاهده محصولات
+                        </button>
+                    </div>
+                </div>
+                <div class="card mx-auto my-2 md:m-2 w-11/12 md:w-3/12 text-center  bg-orange-600 dark:bg-sky-800">
+                    <div class="card-img bg-cover">
+                        <img class="card-img" src="./assets//Images/paya-3-resize.jpg" alt="">
+                    </div>
+                    <div class="content mt-5">
+                        <p class="mb-5">
+                            <span class="text-xl font-bold">فوم باحال</span>
+                        </p>
+                        <p class="subtext">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis </p>
+                        <button class=" text-indigo-300 rounded-md p-2 mt-5">مشاهده محصولات
+                        </button>
+                    </div>
+                </div>
+                <div class="card mx-auto my-2 md:m-2 w-11/12 md:w-3/12 text-center  bg-orange-600 dark:bg-sky-800">
+                    <div class="card-img bg-cover">
+                        <img class="card-img" src="./assets//Images/paya-3-resize.jpg" alt="">
+                    </div>
+                    <div class="content mt-5">
+                        <p class="mb-5">
+                            <span class="text-xl font-bold">فوم باحال</span>
+                        </p>
+                        <p class="subtext">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis </p>
+                        <button class=" text-indigo-300 rounded-md p-2 mt-5">مشاهده محصولات
+                        </button>
+                    </div>
+                </div>
+                <div class="card mx-auto my-2 md:m-2 w-11/12 md:w-3/12 text-center  bg-orange-600 dark:bg-sky-800">
+                    <div class="card-img bg-cover">
+                        <img class="card-img" src="./assets//Images/paya-3-resize.jpg" alt="">
+                    </div>
+                    <div class="content mt-5">
+                        <p class="mb-5">
+                            <span class="text-xl font-bold">فوم باحال</span>
+                        </p>
+                        <p class="subtext">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis </p>
+                        <button class=" text-indigo-300 rounded-md p-2 mt-5">مشاهده محصولات
+                        </button>
+                    </div>
+                </div>
+                <div class="card mx-auto my-2 md:m-2 w-11/12 md:w-3/12 text-center  bg-orange-600 dark:bg-sky-800">
+                    <div class="card-img bg-cover">
+                        <img class="card-img" src="./assets//Images/paya-3-resize.jpg" alt="">
+                    </div>
+                    <div class="content mt-5">
+                        <p class="mb-5">
+                            <span class="text-xl font-bold">فوم باحال</span>
+                        </p>
+                        <p class="subtext">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis </p>
+                        <button class=" text-indigo-300 rounded-md p-2 mt-5">مشاهده محصولات
+                        </button>
+                    </div>
+                </div>
+                <div class="card mx-auto my-2 md:m-2 w-11/12 md:w-3/12 text-center  bg-orange-600 dark:bg-sky-800">
+                    <div class="card-img bg-cover">
+                        <img class="card-img" src="./assets//Images/paya-3-resize.jpg" alt="">
+                    </div>
+                    <div class="content mt-5">
+                        <p class="mb-5">
+                            <span class="text-xl font-bold">فوم باحال</span>
+                        </p>
+                        <p class="subtext">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis </p>
+                        <button class=" text-indigo-300 rounded-md p-2 mt-5">مشاهده محصولات
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end product -->
+        <!-- start aboutUs -->
+        <div class="aboutUs mt-10">
+            <div
+                class="text-3xl md:mt-0 md:pt-0 dark:text-white text-white  text-center pt-64 mt-56 font-yekanTittr font-bold">
+                درباره ما
+            </div>
+            <div class="photo">
+                <img src="./assets//Images/Group 1.png" alt="">
+            </div>
+        </div>
+        <!-- end about us -->
+    </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="module" src="assets/JS/menu.js"></script>
+    <script type="module" src="assets/JS/theme.js"></script>
+    <script src="assets/JS/slider.js"></script>
 </body>
 
 

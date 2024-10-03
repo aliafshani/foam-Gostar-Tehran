@@ -6,7 +6,12 @@ export default {
     "./assets/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        yekanTittr: ['"customFont"'],
+        yekanMatn: ['"customFont2"'],
+      },
+    },
   },
   plugins: [],
 }
