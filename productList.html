@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لیست محصولات</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+
+<body class="bg-orange-300 text-gray-100 dark:bg-gray-900 dark:text-gray-100 ">
+
+    <header class="">
+        <!-- Navbar -->
+        <nav class="bg-orange-700 dark:bg-gray-800 text-white shadow-md fixed w-full md:w-full z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16 items-center">
+
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/40" alt="Logo" class="h-10 w-auto">
+                        <span class="ml-3 text-xl font-bold">MyWebsite</span>
+                    </div>
+
+                    <!-- Navbar Items for Desktop (Including Theme Toggle) -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <button id="themeToggleDesktop" class="text-gray-700 dark:text-gray-300 focus:outline-none">
+                            <svg id="lightIconDesktop" class="h-6 w-6 hidden" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3v2m0 14v2m8-8h2M4 12H2m16.364 4.364l1.414 1.414M6.343 6.343L4.93 4.93m12.02 12.02l1.415 1.414M6.343 17.657L4.93 19.07M12 5a7 7 0 100 14 7 7 0 000-14z" />
+                            </svg>
+                            <svg id="darkIconDesktop" class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3C8.134 3 5 6.134 5 10s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm0 14a7 7 0 100-14 7 7 0 000-14z" />
+                            </svg>
+                        </button>
+                        <a href="#"
+                            class="menu-item text-white dark:text-gray-300 hover:text-orange-200 dark:hover:text-white px-3 py-2 rounded-md">Home</a>
+                        <a href="#"
+                            class="menu-item text-white dark:text-gray-300 hover:text-orange-200 dark:hover:text-white px-3 py-2 rounded-md">About</a>
+                        <a href="#"
+                            class="menu-item text-white dark:text-gray-300 hover:text-orange-200 dark:hover:text-white px-3 py-2 rounded-md">Services</a>
+                        <a href="#"
+                            class="menu-item text-white dark:text-gray-300 hover:text-orange-200 dark:hover:text-white px-3 py-2 rounded-md">Contact</a>
+                        <!-- Dark/Light Mode Toggle (for Desktop) -->
+
+                    </div>
+
+                    <!-- Dark/Light Mode Toggle and Mobile Menu Button (for Mobile) -->
+                    <div class="flex items-center space-x-4 md:hidden">
+                        <!-- Dark/Light Mode Toggle (for Mobile) -->
+                        <button id="themeToggleMobile" class="text-white dark:text-gray-300 focus:outline-none">
+                            <svg id="lightIconMobile" class="h-6 w-6 hidden" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3v2m0 14v2m8-8h2M4 12H2m16.364 4.364l1.414 1.414M6.343 6.343L4.93 4.93m12.02 12.02l1.415 1.414M6.343 17.657L4.93 19.07M12 5a7 7 0 100 14 7 7 0 000-14z" />
+                            </svg>
+
+                            <svg id="darkIconMobile" class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3C8.134 3 5 6.134 5 10s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm0 14a7 7 0 100-14 7 7 0 000-14z" />
+                            </svg>
+                        </button>
+
+                        <!-- Menu Button for Mobile -->
+                        <button id="menuButton"
+                            class="text-white dark:text-gray-300 hover:text-gray-900 focus:outline-none">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dropdown Menu for Mobile -->
+            <div id="mobileMenu"
+                class="md:hidden bg-orange-700 z-50 dark:bg-gray-800 w-full h-dvh right-0 shadow-lg absolute top-16 transition-transform transform translate-x-full">
+                <a href="#"
+                    class="block px-4 py-2 text-white dark:text-gray-300 hover:bg-orange-300 dark:hover:bg-orange-300">Home</a>
+                <a href="#"
+                    class="block px-4 py-2 text-white dark:text-gray-300 hover:bg-orange-300 dark:hover:bg-orange-300">About</a>
+                <a href="#"
+                    class="block px-4 py-2 text-white dark:text-gray-300 hover:bg-orange-300 dark:hover:bg-orange-300">Services</a>
+                <a href="#"
+                    class="block px-4 py-2 text-white dark:text-gray-300 hover:bg-orange-300 dark:hover:bg-orange-300">Contact</a>
+            </div>
+        </nav>
+        <!--end Navbar-->
+    </header>
+
+    <main class="pt-20">
+        <div class="flex w-11/12 mx-auto  flex-col">
+            <div class="overflow-x-auto mt-32 sm:-mx-6 lg:-mx-8">
+                <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full text-right text-sm font-light dark:text-white">
+                            <thead class="border-b border-neutral-200  bg-red-500  font-medium dark:border-white/10">
+                                <tr>
+                                    <th scope="col" class="px-6 py-4">شماره محصول</th>
+                                    <th scope="col" class="px-6 py-4">اسم</th>
+                                    <th scope="col" class="px-6 py-4">ابعاد</th>
+                                    <th scope="col" class="px-6 py-4"> جزییات </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-neutral-200 bg-black/[0.02] dark:border-white/10">
+                                    <td class="whitespace-nowrap text-right px-6 py-4 font-medium">1</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Mark</td>
+                                    <td class="whitespace-nowrap px-6 py-4">Otto</td>
+                                    <td class="whitespace-nowrap  px-6 py-4"><a class="text-blue-300" href="">مشاهده
+                                            بیشتر</a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+    <script type="module" src="assets/JS/menu.js"></script>
+
+    <script type="module" src="assets/JS/theme.js"></script>
+</body>
+
+</html>
